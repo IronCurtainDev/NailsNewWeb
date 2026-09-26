@@ -5,6 +5,16 @@
   "observability": {
     "enabled": true
   },
+  "routes": [
+    {
+      "pattern": "aurevanailsbyche.com/*",
+      "zone_name": "aurevanailsbyche.com"
+    },
+    {
+      "pattern": "www.aurevanailsbyche.com/*",
+      "zone_name": "aurevanailsbyche.com"
+    }
+  ],
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",
