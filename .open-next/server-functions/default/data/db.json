@@ -1,0 +1,134 @@
+{
+  "users": [
+    {
+      "id": "usr_1789548653405_z98y",
+      "createdAt": "2026-09-16T08:50:53.405Z",
+      "email": "test@aureva.com",
+      "passwordHash": "989b7d6bf0438d58fbd1506acdbf50fee982259fb3fe927898fef5beeea133fc",
+      "salt": "c76d0f334eb64fb5bd7cf8ed47bfa990",
+      "name": "Test User",
+      "phone": "+91 98000 12345"
+    },
+    {
+      "id": "usr_1789549072014_rb66",
+      "createdAt": "2026-09-16T08:57:52.014Z",
+      "email": "qatestingche12345@gmail.com",
+      "passwordHash": "f46316ae2d4048c655a7264b2f667aee3442c5d9bc3a26eb4e738e3340a140b1",
+      "salt": "06ccde340bb1f88f6a4dace6ce22fe7e",
+      "name": "QA test",
+      "phone": "443324444"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "bk_1789484733152_6drn",
+      "createdAt": "2026-09-15T15:05:33.152Z",
+      "name": "test one",
+      "phone": "0774389765",
+      "service": "Gel Manicure",
+      "date": "2026-09-15",
+      "time": "10:00 AM",
+      "notes": "test",
+      "status": "pending"
+    },
+    {
+      "id": "bk_demo1",
+      "createdAt": "2026-09-13T14:16:14.832Z",
+      "name": "Priya Sharma",
+      "phone": "+91 98765 43210",
+      "service": "Gel Extensions",
+      "date": "2026-09-16",
+      "time": "2:00 PM",
+      "notes": "Almond shape with subtle chrome finish",
+      "status": "confirmed"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord_1790436144533_1ggh",
+      "createdAt": "2026-09-26T15:22:24.533Z",
+      "customerName": "test",
+      "phone": "aaaaaa",
+      "shippingAddress": "aaaa",
+      "setId": "p2",
+      "setName": "Champagne Velvet Cat-Eye",
+      "shape": "Oval · Medium",
+      "size": "XS",
+      "price": "₹1,599",
+      "notes": "",
+      "status": "new"
+    },
+    {
+      "id": "ord_1789549164132_u7c2",
+      "createdAt": "2026-09-16T08:59:24.132Z",
+      "customerName": "QA test",
+      "phone": "99877tff",
+      "shippingAddress": "asdfghjkkkksdfghjkl",
+      "setId": "p1",
+      "setName": "Blush Pearl & 3D Floral",
+      "shape": "Almond · Medium",
+      "size": "M",
+      "price": "₹1,899",
+      "notes": "",
+      "status": "new"
+    },
+    {
+      "id": "ord_1789549124061_5s6s",
+      "createdAt": "2026-09-16T08:58:44.061Z",
+      "customerName": "QA test",
+      "phone": "443324444",
+      "shippingAddress": "",
+      "setId": "p1",
+      "setName": "Blush Pearl & 3D Floral",
+      "shape": "Almond · Medium",
+      "size": "M",
+      "price": "₹1,899",
+      "notes": "",
+      "status": "new",
+      "userId": "usr_1789549072014_rb66"
+    },
+    {
+      "id": "ord_1789549100067_f7ja",
+      "createdAt": "2026-09-16T08:58:20.067Z",
+      "customerName": "QA test",
+      "phone": "443324444",
+      "shippingAddress": "",
+      "setId": "p1",
+      "setName": "Blush Pearl & 3D Floral",
+      "shape": "Almond · Medium",
+      "size": "M",
+      "price": "₹1,899",
+      "notes": "",
+      "status": "new",
+      "userId": "usr_1789549072014_rb66"
+    },
+    {
+      "id": "ord_1789396485078_ghs0",
+      "createdAt": "2026-09-14T14:34:45.078Z",
+      "customerName": "Meera Iyer",
+      "phone": "+91 97766 55443",
+      "shippingAddress": "12 Palm Grove, Koramangala, Bangalore",
+      "setId": "p2",
+      "setName": "Champagne Velvet Cat-Eye",
+      "shape": "Oval · Medium",
+      "size": "S",
+      "price": "₹1,599",
+      "notes": "Gift wrapping if possible",
+      "status": "new"
+    },
+    {
+      "id": "ord_demo1",
+      "createdAt": "2026-09-14T02:16:14.832Z",
+      "customerName": "Sneha Patel",
+      "phone": "+91 98123 45678",
+      "shippingAddress": "Flat 402, Lotus Residency, Indiranagar, Bangalore - 560038",
+      "setId": "p1",
+      "setName": "Blush Pearl & 3D Floral",
+      "shape": "Almond · Medium",
+      "size": "M",
+      "price": "₹1,899",
+      "notes": "Need it before the weekend",
+      "status": "new"
+    }
+  ]
+}

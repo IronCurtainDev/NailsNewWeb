@@ -1,9 +1,14 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "nailsweb",
-  "compatibility_date": "2026-09-25",
-  "observability": {
-    "enabled": true
+  "name": "my-nextjs-project",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-08-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
   },
   "routes": [
     {
