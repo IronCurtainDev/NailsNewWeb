@@ -22,13 +22,13 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ success: false, error: "Invalid token." }, { status: 401 });
     }
 
-    const user = getUserById(parsed.userId);
+    const user = await getUserById(parsed.userId);
     if (!user) {
       return NextResponse.json({ success: false, error: "User not found." }, { status: 404 });
     }
 
-    const bookings = getBookingsByUserId(user.id);
-    const orders = getOrdersByUserId(user.id);
+    const bookings = await getBookingsByUserId(user.id);
+    const orders = await getOrdersByUserId(user.id);
 
     return NextResponse.json({
       success: true,
@@ -61,7 +61,7 @@ export async function PATCH(request: NextRequest) {
       return NextResponse.json({ success: false, error: "Invalid token." }, { status: 401 });
     }
 
-    const user = getUserById(parsed.userId);
+    const user = await getUserById(parsed.userId);
     if (!user) {
       return NextResponse.json({ success: false, error: "User not found." }, { status: 404 });
     }
@@ -72,7 +72,7 @@ export async function PATCH(request: NextRequest) {
     if (name) updates.name = name.trim();
     if (phone) updates.phone = phone.trim();
 
-    const updated = updateUser(user.id, updates);
+    const updated = await updateUser(user.id, updates);
     return NextResponse.json({
       success: true,
       user: {

@@ -1,3 +1,4 @@
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 import fs from "fs";
 import path from "path";
 import crypto from "crypto";
@@ -52,13 +53,56 @@ interface DatabaseSchema {
 }
 
 // ============================================================
-// FILE HELPERS
+// PASSWORD & TOKEN UTILITIES
+// ============================================================
+
+export function hashPassword(password: string, salt: string): string {
+  return crypto.createHash("sha256").update(salt + password).digest("hex");
+}
+
+export function generateSalt(): string {
+  return crypto.randomBytes(16).toString("hex");
+}
+
+export function generateToken(userId: string, email: string): string {
+  const payload = JSON.stringify({ userId, email, ts: Date.now() });
+  return Buffer.from(payload).toString("base64");
+}
+
+export function parseToken(token: string): { userId: string; email: string; ts: number } | null {
+  try {
+    const payload = Buffer.from(token, "base64").toString("utf-8");
+    return JSON.parse(payload);
+  } catch {
+    return null;
+  }
+}
+
+// ============================================================
+// D1 CONTEXT HELPER
+// ============================================================
+
+async function getD1(): Promise<any | null> {
+  try {
+    const ctx = await getCloudflareContext({ async: true });
+    const env = ctx?.env as { DB?: any } | undefined;
+    if (env?.DB) {
+      return env.DB;
+    }
+  } catch {
+    // Cloudflare context not available (e.g. standard local dev or static pre-render)
+  }
+  return null;
+}
+
+// ============================================================
+// FALLBACK LOCAL JSON FILE DB (FOR LOCAL DEV WITHOUT WRANGLER)
 // ============================================================
 
 const DATA_DIR = path.join(process.cwd(), "data");
 const DB_FILE = path.join(DATA_DIR, "db.json");
 
-function ensureDb(): DatabaseSchema {
+function ensureLocalDb(): DatabaseSchema {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
@@ -90,7 +134,7 @@ function ensureDb(): DatabaseSchema {
           setName: "Blush Pearl & 3D Floral",
           shape: "Almond · Medium",
           size: "M",
-          price: "₹1,899",
+          price: "Rs.3000",
           notes: "Need it before the weekend",
           status: "new",
         },
@@ -103,18 +147,16 @@ function ensureDb(): DatabaseSchema {
   try {
     const content = fs.readFileSync(DB_FILE, "utf-8");
     const parsed = JSON.parse(content);
-    // Ensure users array exists for older dbs
     if (!parsed.users) parsed.users = [];
     return parsed;
-  } catch (error) {
-    console.error("Error reading database file, resetting:", error);
+  } catch {
     const fallback: DatabaseSchema = { users: [], bookings: [], orders: [] };
     fs.writeFileSync(DB_FILE, JSON.stringify(fallback, null, 2), "utf-8");
     return fallback;
   }
 }
 
-function saveDb(data: DatabaseSchema): void {
+function saveLocalDb(data: DatabaseSchema): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
@@ -122,58 +164,39 @@ function saveDb(data: DatabaseSchema): void {
 }
 
 // ============================================================
-// PASSWORD UTILITIES
-// ============================================================
-
-export function hashPassword(password: string, salt: string): string {
-  return crypto
-    .createHash("sha256")
-    .update(salt + password)
-    .digest("hex");
-}
-
-export function generateSalt(): string {
-  return crypto.randomBytes(16).toString("hex");
-}
-
-// ============================================================
-// SESSION TOKEN UTILITIES
-// ============================================================
-
-export function generateToken(userId: string, email: string): string {
-  const payload = JSON.stringify({ userId, email, ts: Date.now() });
-  return Buffer.from(payload).toString("base64");
-}
-
-export function parseToken(token: string): { userId: string; email: string; ts: number } | null {
-  try {
-    const payload = Buffer.from(token, "base64").toString("utf-8");
-    return JSON.parse(payload);
-  } catch {
-    return null;
-  }
-}
-
-// ============================================================
 // USER CRUD
 // ============================================================
 
-export function getAllUsers(): User[] {
-  return ensureDb().users;
+export async function getAllUsers(): Promise<User[]> {
+  const d1 = await getD1();
+  if (d1) {
+    const res = await d1.prepare("SELECT * FROM users ORDER BY createdAt DESC").all();
+    return res.results as User[];
+  }
+  return ensureLocalDb().users;
 }
 
-export function getUserByEmail(email: string): User | null {
-  const db = ensureDb();
+export async function getUserByEmail(email: string): Promise<User | null> {
+  const d1 = await getD1();
+  if (d1) {
+    const res = await d1.prepare("SELECT * FROM users WHERE LOWER(email) = LOWER(?)").bind(email.trim()).first();
+    return (res as User) || null;
+  }
+  const db = ensureLocalDb();
   return db.users.find((u) => u.email.toLowerCase() === email.toLowerCase()) || null;
 }
 
-export function getUserById(id: string): User | null {
-  const db = ensureDb();
+export async function getUserById(id: string): Promise<User | null> {
+  const d1 = await getD1();
+  if (d1) {
+    const res = await d1.prepare("SELECT * FROM users WHERE id = ?").bind(id).first();
+    return (res as User) || null;
+  }
+  const db = ensureLocalDb();
   return db.users.find((u) => u.id === id) || null;
 }
 
-export function createUser(payload: { email: string; password: string; name: string; phone: string }): User {
-  const db = ensureDb();
+export async function createUser(payload: { email: string; password: string; name: string; phone: string }): Promise<User> {
   const salt = generateSalt();
   const newUser: User = {
     id: `usr_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`,
@@ -184,17 +207,42 @@ export function createUser(payload: { email: string; password: string; name: str
     name: payload.name.trim(),
     phone: payload.phone.trim(),
   };
+
+  const d1 = await getD1();
+  if (d1) {
+    await d1
+      .prepare(
+        "INSERT INTO users (id, createdAt, email, passwordHash, salt, name, phone) VALUES (?, ?, ?, ?, ?, ?, ?)"
+      )
+      .bind(newUser.id, newUser.createdAt, newUser.email, newUser.passwordHash, newUser.salt, newUser.name, newUser.phone)
+      .run();
+    return newUser;
+  }
+
+  const db = ensureLocalDb();
   db.users.push(newUser);
-  saveDb(db);
+  saveLocalDb(db);
   return newUser;
 }
 
-export function updateUser(id: string, updates: Partial<Pick<User, "name" | "phone" | "email">>): User | null {
-  const db = ensureDb();
+export async function updateUser(id: string, updates: Partial<Pick<User, "name" | "phone" | "email">>): Promise<User | null> {
+  const d1 = await getD1();
+  if (d1) {
+    const user = await getUserById(id);
+    if (!user) return null;
+    const updated = { ...user, ...updates };
+    await d1
+      .prepare("UPDATE users SET name = ?, phone = ?, email = ? WHERE id = ?")
+      .bind(updated.name, updated.phone, updated.email, id)
+      .run();
+    return updated;
+  }
+
+  const db = ensureLocalDb();
   const index = db.users.findIndex((u) => u.id === id);
   if (index === -1) return null;
   db.users[index] = { ...db.users[index], ...updates };
-  saveDb(db);
+  saveLocalDb(db);
   return db.users[index];
 }
 
@@ -202,22 +250,31 @@ export function updateUser(id: string, updates: Partial<Pick<User, "name" | "pho
 // BOOKINGS CRUD
 // ============================================================
 
-export function getAllBookings(): Booking[] {
-  const db = ensureDb();
+export async function getAllBookings(): Promise<Booking[]> {
+  const d1 = await getD1();
+  if (d1) {
+    const res = await d1.prepare("SELECT * FROM bookings ORDER BY createdAt DESC").all();
+    return res.results as Booking[];
+  }
+  const db = ensureLocalDb();
   return db.bookings.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 }
 
-export function getBookingsByUserId(userId: string): Booking[] {
-  const db = ensureDb();
+export async function getBookingsByUserId(userId: string): Promise<Booking[]> {
+  const d1 = await getD1();
+  if (d1) {
+    const res = await d1.prepare("SELECT * FROM bookings WHERE userId = ? ORDER BY createdAt DESC").bind(userId).all();
+    return res.results as Booking[];
+  }
+  const db = ensureLocalDb();
   return db.bookings
     .filter((b) => b.userId === userId)
     .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 }
 
-export function createBooking(
+export async function createBooking(
   payload: Omit<Booking, "id" | "createdAt" | "status"> & { status?: Booking["status"] }
-): Booking {
-  const db = ensureDb();
+): Promise<Booking> {
   const newBooking: Booking = {
     id: `bk_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`,
     createdAt: new Date().toISOString(),
@@ -228,30 +285,70 @@ export function createBooking(
     time: payload.time,
     notes: payload.notes?.trim() || "",
     status: payload.status || "pending",
-    userId: payload.userId,
+    userId: payload.userId || undefined,
   };
 
+  const d1 = await getD1();
+  if (d1) {
+    await d1
+      .prepare(
+        "INSERT INTO bookings (id, createdAt, name, phone, service, date, time, notes, status, userId) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+      )
+      .bind(
+        newBooking.id,
+        newBooking.createdAt,
+        newBooking.name,
+        newBooking.phone,
+        newBooking.service,
+        newBooking.date,
+        newBooking.time,
+        newBooking.notes,
+        newBooking.status,
+        newBooking.userId || null
+      )
+      .run();
+    return newBooking;
+  }
+
+  const db = ensureLocalDb();
   db.bookings.unshift(newBooking);
-  saveDb(db);
+  saveLocalDb(db);
   return newBooking;
 }
 
-export function updateBooking(id: string, updates: Partial<Booking>): Booking | null {
-  const db = ensureDb();
+export async function updateBooking(id: string, updates: Partial<Booking>): Promise<Booking | null> {
+  const d1 = await getD1();
+  if (d1) {
+    const existing = (await d1.prepare("SELECT * FROM bookings WHERE id = ?").bind(id).first()) as Booking | null;
+    if (!existing) return null;
+    const merged = { ...existing, ...updates };
+    await d1
+      .prepare("UPDATE bookings SET name = ?, phone = ?, service = ?, date = ?, time = ?, notes = ?, status = ?, userId = ? WHERE id = ?")
+      .bind(merged.name, merged.phone, merged.service, merged.date, merged.time, merged.notes || "", merged.status, merged.userId || null, id)
+      .run();
+    return merged;
+  }
+
+  const db = ensureLocalDb();
   const index = db.bookings.findIndex((b) => b.id === id);
   if (index === -1) return null;
-
   db.bookings[index] = { ...db.bookings[index], ...updates };
-  saveDb(db);
+  saveLocalDb(db);
   return db.bookings[index];
 }
 
-export function deleteBooking(id: string): boolean {
-  const db = ensureDb();
+export async function deleteBooking(id: string): Promise<boolean> {
+  const d1 = await getD1();
+  if (d1) {
+    const res = await d1.prepare("DELETE FROM bookings WHERE id = ?").bind(id).run();
+    return (res.meta?.changes ?? 0) > 0;
+  }
+
+  const db = ensureLocalDb();
   const initialLen = db.bookings.length;
   db.bookings = db.bookings.filter((b) => b.id !== id);
   if (db.bookings.length !== initialLen) {
-    saveDb(db);
+    saveLocalDb(db);
     return true;
   }
   return false;
@@ -261,22 +358,31 @@ export function deleteBooking(id: string): boolean {
 // PRESS-ON ORDERS CRUD
 // ============================================================
 
-export function getAllOrders(): PressOnOrder[] {
-  const db = ensureDb();
+export async function getAllOrders(): Promise<PressOnOrder[]> {
+  const d1 = await getD1();
+  if (d1) {
+    const res = await d1.prepare("SELECT * FROM orders ORDER BY createdAt DESC").all();
+    return res.results as PressOnOrder[];
+  }
+  const db = ensureLocalDb();
   return db.orders.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 }
 
-export function getOrdersByUserId(userId: string): PressOnOrder[] {
-  const db = ensureDb();
+export async function getOrdersByUserId(userId: string): Promise<PressOnOrder[]> {
+  const d1 = await getD1();
+  if (d1) {
+    const res = await d1.prepare("SELECT * FROM orders WHERE userId = ? ORDER BY createdAt DESC").bind(userId).all();
+    return res.results as PressOnOrder[];
+  }
+  const db = ensureLocalDb();
   return db.orders
     .filter((o) => o.userId === userId)
     .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 }
 
-export function createOrder(
+export async function createOrder(
   payload: Omit<PressOnOrder, "id" | "createdAt" | "status"> & { status?: PressOnOrder["status"] }
-): PressOnOrder {
-  const db = ensureDb();
+): Promise<PressOnOrder> {
   const newOrder: PressOnOrder = {
     id: `ord_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`,
     createdAt: new Date().toISOString(),
@@ -290,30 +396,88 @@ export function createOrder(
     price: payload.price,
     notes: payload.notes?.trim() || "",
     status: payload.status || "new",
-    userId: payload.userId,
+    userId: payload.userId || undefined,
   };
 
+  const d1 = await getD1();
+  if (d1) {
+    await d1
+      .prepare(
+        "INSERT INTO orders (id, createdAt, customerName, phone, shippingAddress, setId, setName, shape, size, price, notes, status, userId) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+      )
+      .bind(
+        newOrder.id,
+        newOrder.createdAt,
+        newOrder.customerName,
+        newOrder.phone,
+        newOrder.shippingAddress || "",
+        newOrder.setId,
+        newOrder.setName,
+        newOrder.shape,
+        newOrder.size,
+        newOrder.price,
+        newOrder.notes,
+        newOrder.status,
+        newOrder.userId || null
+      )
+      .run();
+    return newOrder;
+  }
+
+  const db = ensureLocalDb();
   db.orders.unshift(newOrder);
-  saveDb(db);
+  saveLocalDb(db);
   return newOrder;
 }
 
-export function updateOrder(id: string, updates: Partial<PressOnOrder>): PressOnOrder | null {
-  const db = ensureDb();
+export async function updateOrder(id: string, updates: Partial<PressOnOrder>): Promise<PressOnOrder | null> {
+  const d1 = await getD1();
+  if (d1) {
+    const existing = (await d1.prepare("SELECT * FROM orders WHERE id = ?").bind(id).first()) as PressOnOrder | null;
+    if (!existing) return null;
+    const merged = { ...existing, ...updates };
+    await d1
+      .prepare(
+        "UPDATE orders SET customerName = ?, phone = ?, shippingAddress = ?, setId = ?, setName = ?, shape = ?, size = ?, price = ?, notes = ?, status = ?, userId = ? WHERE id = ?"
+      )
+      .bind(
+        merged.customerName,
+        merged.phone,
+        merged.shippingAddress || "",
+        merged.setId,
+        merged.setName,
+        merged.shape,
+        merged.size,
+        merged.price,
+        merged.notes || "",
+        merged.status,
+        merged.userId || null,
+        id
+      )
+      .run();
+    return merged;
+  }
+
+  const db = ensureLocalDb();
   const index = db.orders.findIndex((o) => o.id === id);
   if (index === -1) return null;
-
   db.orders[index] = { ...db.orders[index], ...updates };
-  saveDb(db);
+  saveLocalDb(db);
   return db.orders[index];
 }
 
-export function deleteOrder(id: string): boolean {
-  const db = ensureDb();
+export async function deleteOrder(id: string): Promise<boolean> {
+  const d1 = await getD1();
+  if (d1) {
+    const res = await d1.prepare("DELETE FROM orders WHERE id = ?").bind(id).run();
+    return (res.meta?.changes ?? 0) > 0;
+  }
+
+  const db = ensureLocalDb();
   const initialLen = db.orders.length;
   db.orders = db.orders.filter((o) => o.id !== id);
   if (db.orders.length !== initialLen) {
-    saveDb(db);
+    saveLocalDb(db);
     return true;
   }
   return false;

@@ -1,29 +1,36 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "my-nextjs-project",
-  "main": ".open-next/worker.js",
-  "compatibility_date": "2026-08-01",
-  "compatibility_flags": [
-    "nodejs_compat"
-  ],
-  "assets": {
-    "directory": ".open-next/assets",
-    "binding": "ASSETS"
-  },
-  "routes": [
-    {
-      "pattern": "aurevanailsbyche.com/*",
-      "zone_name": "aurevanailsbyche.com"
-    },
-    {
-      "pattern": "www.aurevanailsbyche.com/*",
-      "zone_name": "aurevanailsbyche.com"
-    }
-  ],
-  "services": [
-    {
-      "binding": "WORKER_SELF_REFERENCE",
-      "service": "nailsweb"
-    }
-  ]
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "aurevabyche",
+	"main": ".open-next/worker.js",
+	"compatibility_date": "2026-08-01",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"assets": {
+		"directory": ".open-next/assets",
+		"binding": "ASSETS"
+	},
+	"routes": [
+		{
+			"pattern": "aurevabyche.com",
+			"custom_domain": true
+		},
+		{
+			"pattern": "www.aurevabyche.com",
+			"custom_domain": true
+		}
+	],
+	"services": [
+		{
+			"binding": "WORKER_SELF_REFERENCE",
+			"service": "aurevabyche"
+		}
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "aureva-db",
+			"database_id": "a106029b-1689-4f85-b50c-4d352e9cef40"
+		}
+	]
 }

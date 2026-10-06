@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if email already exists
-    const existing = getUserByEmail(email);
+    const existing = await getUserByEmail(email);
     if (existing) {
       return NextResponse.json(
         { success: false, error: "An account with this email already exists." },
@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const user = createUser({ email, password, name, phone });
+    const user = await createUser({ email, password, name, phone });
     const token = generateToken(user.id, user.email);
 
     return NextResponse.json(

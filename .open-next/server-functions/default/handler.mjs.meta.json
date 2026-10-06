@@ -244,7 +244,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/react/index.js": {
-      "bytes": 186,
+      "bytes": 178,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/react/cjs/react.production.js",
@@ -708,7 +708,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/next/dist/lib/find-pages-dir.js": {
-      "bytes": 1995,
+      "bytes": 1994,
       "imports": [
         {
           "path": "fs",
@@ -3905,7 +3905,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/next/dist/server/load-manifest.external.js": {
-      "bytes": 53646,
+      "bytes": 53389,
       "imports": [
         {
           "path": "path",
@@ -3930,27 +3930,27 @@
         {
           "path": ".open-next/server-functions/default/.next/server/app/api/auth/register/route_client-reference-manifest.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\api\\auth\\register\\route_client-reference-manifest.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/api/auth/register/route_client-reference-manifest.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/api/auth/login/route_client-reference-manifest.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\api\\auth\\login\\route_client-reference-manifest.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/api/auth/login/route_client-reference-manifest.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/api/bookings/route_client-reference-manifest.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\api\\bookings\\route_client-reference-manifest.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/api/bookings/route_client-reference-manifest.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/api/auth/me/route_client-reference-manifest.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\api\\auth\\me\\route_client-reference-manifest.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/api/auth/me/route_client-reference-manifest.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/api/orders/route_client-reference-manifest.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\api\\orders\\route_client-reference-manifest.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/api/orders/route_client-reference-manifest.js"
         }
       ],
       "format": "cjs"
@@ -4218,7 +4218,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.prod.js": {
-      "bytes": 696429,
+      "bytes": 696387,
       "imports": [
         {
           "path": "url",
@@ -4373,17 +4373,17 @@
         {
           "path": ".open-next/server-functions/default/composable-cache.cjs",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/composable-cache.cjs"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/composable-cache.cjs"
         },
         {
           "path": ".open-next/server-functions/default/composable-cache.cjs",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/composable-cache.cjs"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/composable-cache.cjs"
         },
         {
           "path": ".open-next/server-functions/default/cache.cjs",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/cache.cjs"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/cache.cjs"
         }
       ],
       "format": "cjs"
@@ -4580,6 +4580,68 @@
       "imports": [],
       "format": "cjs"
     },
+    ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1cpuet1._.js": {
+      "bytes": 8390,
+      "imports": [
+        {
+          "path": ".open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.prod.js",
+          "kind": "require-call",
+          "original": "next/dist/compiled/next-server/app-page-turbo.runtime.prod.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/node_modules/next/dist/server/app-render/action-async-storage.external.js",
+          "kind": "require-call",
+          "original": "next/dist/server/app-render/action-async-storage.external.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/node_modules/next/dist/server/app-render/after-task-async-storage.external.js",
+          "kind": "require-call",
+          "original": "next/dist/server/app-render/after-task-async-storage.external.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/node_modules/next/dist/server/app-render/dynamic-access-async-storage.external.js",
+          "kind": "require-call",
+          "original": "next/dist/server/app-render/dynamic-access-async-storage.external.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/node_modules/next/dist/server/app-render/work-async-storage.external.js",
+          "kind": "require-call",
+          "original": "next/dist/server/app-render/work-async-storage.external.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/node_modules/next/dist/server/app-render/work-unit-async-storage.external.js",
+          "kind": "require-call",
+          "original": "next/dist/server/app-render/work-unit-async-storage.external.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/node_modules/next/dist/server/runtime-reacts.external.js",
+          "kind": "require-call",
+          "original": "next/dist/server/runtime-reacts.external.js"
+        }
+      ],
+      "format": "cjs"
+    },
+    ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1f2jx51._.js": {
+      "bytes": 8154,
+      "imports": [
+        {
+          "path": ".open-next/server-functions/default/node_modules/next/dist/shared/lib/no-fallback-error.external.js",
+          "kind": "require-call",
+          "original": "next/dist/shared/lib/no-fallback-error.external.js"
+        }
+      ],
+      "format": "cjs"
+    },
+    ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__global-error_page_actions_0zi5s8-.js": {
+      "bytes": 125,
+      "imports": [],
+      "format": "cjs"
+    },
+    ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_0q-w892.js": {
+      "bytes": 343,
+      "imports": [],
+      "format": "cjs"
+    },
     ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1m7qw-2._.js": {
       "bytes": 4146,
       "imports": [
@@ -4601,18 +4663,13 @@
       "imports": [],
       "format": "cjs"
     },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_0q-w892.js": {
-      "bytes": 343,
-      "imports": [],
-      "format": "cjs"
-    },
     ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_admin_page_tsx_0ublbd0._.js": {
       "bytes": 16921,
       "imports": [],
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js": {
-      "bytes": 186460,
+      "bytes": 186418,
       "imports": [
         {
           "path": "url",
@@ -4702,17 +4759,17 @@
         {
           "path": ".open-next/server-functions/default/composable-cache.cjs",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/composable-cache.cjs"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/composable-cache.cjs"
         },
         {
           "path": ".open-next/server-functions/default/composable-cache.cjs",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/composable-cache.cjs"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/composable-cache.cjs"
         },
         {
           "path": ".open-next/server-functions/default/cache.cjs",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/cache.cjs"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/cache.cjs"
         },
         {
           "path": ".open-next/server-functions/default/node_modules/next/dist/server/app-render/after-task-async-storage.external.js",
@@ -4754,7 +4811,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1eb1ktr._.js": {
-      "bytes": 13235,
+      "bytes": 17634,
       "imports": [
         {
           "path": "crypto",
@@ -4825,7 +4882,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0k13ots._.js": {
-      "bytes": 14064,
+      "bytes": 18487,
       "imports": [
         {
           "path": "crypto",
@@ -4896,7 +4953,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1_66u60._.js": {
-      "bytes": 13578,
+      "bytes": 17983,
       "imports": [
         {
           "path": "crypto",
@@ -4967,7 +5024,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1my5ziq._.js": {
-      "bytes": 14577,
+      "bytes": 18994,
       "imports": [
         {
           "path": "crypto",
@@ -5038,7 +5095,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0kia8q9._.js": {
-      "bytes": 14655,
+      "bytes": 19072,
       "imports": [
         {
           "path": "crypto",
@@ -5253,7 +5310,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_page_tsx_1chiuah._.js": {
-      "bytes": 66537,
+      "bytes": 66472,
       "imports": [],
       "format": "cjs"
     },
@@ -5278,65 +5335,8 @@
       "imports": [],
       "format": "cjs"
     },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1cpuet1._.js": {
-      "bytes": 8390,
-      "imports": [
-        {
-          "path": ".open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.prod.js",
-          "kind": "require-call",
-          "original": "next/dist/compiled/next-server/app-page-turbo.runtime.prod.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/node_modules/next/dist/server/app-render/action-async-storage.external.js",
-          "kind": "require-call",
-          "original": "next/dist/server/app-render/action-async-storage.external.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/node_modules/next/dist/server/app-render/after-task-async-storage.external.js",
-          "kind": "require-call",
-          "original": "next/dist/server/app-render/after-task-async-storage.external.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/node_modules/next/dist/server/app-render/dynamic-access-async-storage.external.js",
-          "kind": "require-call",
-          "original": "next/dist/server/app-render/dynamic-access-async-storage.external.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/node_modules/next/dist/server/app-render/work-async-storage.external.js",
-          "kind": "require-call",
-          "original": "next/dist/server/app-render/work-async-storage.external.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/node_modules/next/dist/server/app-render/work-unit-async-storage.external.js",
-          "kind": "require-call",
-          "original": "next/dist/server/app-render/work-unit-async-storage.external.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/node_modules/next/dist/server/runtime-reacts.external.js",
-          "kind": "require-call",
-          "original": "next/dist/server/runtime-reacts.external.js"
-        }
-      ],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1f2jx51._.js": {
-      "bytes": 8154,
-      "imports": [
-        {
-          "path": ".open-next/server-functions/default/node_modules/next/dist/shared/lib/no-fallback-error.external.js",
-          "kind": "require-call",
-          "original": "next/dist/shared/lib/no-fallback-error.external.js"
-        }
-      ],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__global-error_page_actions_0zi5s8-.js": {
-      "bytes": 125,
-      "imports": [],
-      "format": "cjs"
-    },
     ".open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js": {
-      "bytes": 45587,
+      "bytes": 44845,
       "imports": [
         {
           "path": "worker_threads",
@@ -5366,267 +5366,267 @@
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__06ory-g._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__06ory-g._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__06ory-g._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0xpcv9w._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0xpcv9w._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0xpcv9w._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0y_e9do._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0y_e9do._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0y_e9do._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__12c_hrx._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__12c_hrx._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__12c_hrx._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__not-found_page_actions_0pt47yr.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__not-found_page_actions_0pt47yr.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__not-found_page_actions_0pt47yr.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_01xbj_9._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_01xbj_9._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_01xbj_9._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_1n3w9lb._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_1n3w9lb._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_1n3w9lb._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_1v8aef8._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_1v8aef8._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_1v8aef8._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_0wpq8j3._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_0wpq8j3._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_0wpq8j3._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_forbidden_0symwr9.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_forbidden_0symwr9.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_forbidden_0symwr9.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_unauthorized_0l_sp0x.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_unauthorized_0l_sp0x.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_unauthorized_0l_sp0x.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_layout_tsx_0r5yz5t._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/src_app_layout_tsx_0r5yz5t._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1m7qw-2._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1m7qw-2._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_admin_page_actions_1mcickz.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_admin_page_actions_1mcickz.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_1nkgb45._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_1nkgb45._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_0q-w892.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_0q-w892.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_admin_page_tsx_0ublbd0._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/src_app_admin_page_tsx_0ublbd0._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0l3yhx4._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0l3yhx4._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1eb1ktr._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1eb1ktr._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/[turbopack]_runtime.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[turbopack]_runtime.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_login_route_actions_1ox7zi0.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_login_route_actions_1ox7zi0.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0k13ots._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0k13ots._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_me_route_actions_17uv6xh.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_me_route_actions_17uv6xh.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1_66u60._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1_66u60._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_register_route_actions_0g4vfdr.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_register_route_actions_0g4vfdr.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1my5ziq._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1my5ziq._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_bookings_route_actions_1x10bx0.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_bookings_route_actions_1x10bx0.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0kia8q9._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0kia8q9._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_orders_route_actions_18oip2y.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_orders_route_actions_18oip2y.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0cz1bpb._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0cz1bpb._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_dashboard_page_actions_10dr1c5.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_dashboard_page_actions_10dr1c5.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0czy9dq._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0czy9dq._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0mtji6m._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0mtji6m._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_0x3i8za._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_0x3i8za._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_1lnqo1a._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_1lnqo1a._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_dashboard_page_tsx_07pubuq._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/src_app_dashboard_page_tsx_07pubuq._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/[externals]__0l8ei7u._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[externals]__0l8ei7u._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/_0uxp3uh._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_0uxp3uh._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_favicon_ico_route_actions_0g2jjls.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_favicon_ico_route_actions_0g2jjls.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__05f8wbh._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__05f8wbh._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_1h3ugvo._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_1h3ugvo._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_login_page_actions_04fnjo0.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_login_page_actions_04fnjo0.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1o8jotz._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1o8jotz._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_page_actions_0hhsz1j.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_page_actions_0hhsz1j.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_@swc_helpers_cjs__interop_require_default_cjs_1ztp13a._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_@swc_helpers_cjs__interop_require_default_cjs_1ztp13a._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_page_tsx_1chiuah._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/src_app_page_tsx_1chiuah._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1gth76-._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1gth76-._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_0ipxutm._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_0ipxutm._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_register_page_actions_1op-s-x.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_register_page_actions_1op-s-x.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/src_app_layout_tsx_0r5yz5t._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1cpuet1._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1cpuet1._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1cpuet1._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1f2jx51._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1f2jx51._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1f2jx51._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__global-error_page_actions_0zi5s8-.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__global-error_page_actions_0zi5s8-.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__global-error_page_actions_0zi5s8-.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_0q-w892.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_0q-w892.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1m7qw-2._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1m7qw-2._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_admin_page_actions_1mcickz.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_admin_page_actions_1mcickz.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_1nkgb45._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_1nkgb45._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_admin_page_tsx_0ublbd0._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/src_app_admin_page_tsx_0ublbd0._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0l3yhx4._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0l3yhx4._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1eb1ktr._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1eb1ktr._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/[turbopack]_runtime.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[turbopack]_runtime.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_login_route_actions_1ox7zi0.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_login_route_actions_1ox7zi0.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0k13ots._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0k13ots._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_me_route_actions_17uv6xh.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_me_route_actions_17uv6xh.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1_66u60._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1_66u60._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_register_route_actions_0g4vfdr.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_register_route_actions_0g4vfdr.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1my5ziq._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1my5ziq._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_bookings_route_actions_1x10bx0.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_bookings_route_actions_1x10bx0.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0kia8q9._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0kia8q9._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_orders_route_actions_18oip2y.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_orders_route_actions_18oip2y.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0cz1bpb._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0cz1bpb._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_dashboard_page_actions_10dr1c5.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_dashboard_page_actions_10dr1c5.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0czy9dq._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0czy9dq._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0mtji6m._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0mtji6m._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_0x3i8za._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_0x3i8za._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_1lnqo1a._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_1lnqo1a._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_dashboard_page_tsx_07pubuq._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/src_app_dashboard_page_tsx_07pubuq._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/[externals]__0l8ei7u._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[externals]__0l8ei7u._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/_0uxp3uh._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_0uxp3uh._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_favicon_ico_route_actions_0g2jjls.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_favicon_ico_route_actions_0g2jjls.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__05f8wbh._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__05f8wbh._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_1h3ugvo._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_1h3ugvo._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_login_page_actions_04fnjo0.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_login_page_actions_04fnjo0.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1o8jotz._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1o8jotz._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_page_actions_0hhsz1j.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_page_actions_0hhsz1j.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_@swc_helpers_cjs__interop_require_default_cjs_1ztp13a._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_@swc_helpers_cjs__interop_require_default_cjs_1ztp13a._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_page_tsx_1chiuah._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/src_app_page_tsx_1chiuah._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1gth76-._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1gth76-._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_0ipxutm._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_0ipxutm._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_register_page_actions_1op-s-x.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_register_page_actions_1op-s-x.js"
         },
         {
           "path": "<runtime>",
@@ -5637,7 +5637,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/[turbopack]_runtime.js": {
-      "bytes": 45577,
+      "bytes": 44835,
       "imports": [
         {
           "path": "worker_threads",
@@ -5667,267 +5667,267 @@
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__06ory-g._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__06ory-g._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__06ory-g._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0xpcv9w._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0xpcv9w._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0xpcv9w._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0y_e9do._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0y_e9do._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0y_e9do._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__12c_hrx._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__12c_hrx._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__12c_hrx._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__not-found_page_actions_0pt47yr.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__not-found_page_actions_0pt47yr.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__not-found_page_actions_0pt47yr.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_01xbj_9._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_01xbj_9._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_01xbj_9._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_1n3w9lb._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_1n3w9lb._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_1n3w9lb._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_1v8aef8._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_1v8aef8._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_1v8aef8._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_0wpq8j3._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_0wpq8j3._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_0wpq8j3._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_forbidden_0symwr9.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_forbidden_0symwr9.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_forbidden_0symwr9.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_unauthorized_0l_sp0x.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_unauthorized_0l_sp0x.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_unauthorized_0l_sp0x.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_layout_tsx_0r5yz5t._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/src_app_layout_tsx_0r5yz5t._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1m7qw-2._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1m7qw-2._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_admin_page_actions_1mcickz.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_admin_page_actions_1mcickz.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_1nkgb45._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_1nkgb45._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_0q-w892.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_0q-w892.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_admin_page_tsx_0ublbd0._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/src_app_admin_page_tsx_0ublbd0._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0l3yhx4._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0l3yhx4._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1eb1ktr._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1eb1ktr._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/[turbopack]_runtime.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[turbopack]_runtime.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_login_route_actions_1ox7zi0.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_login_route_actions_1ox7zi0.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0k13ots._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0k13ots._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_me_route_actions_17uv6xh.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_me_route_actions_17uv6xh.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1_66u60._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1_66u60._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_register_route_actions_0g4vfdr.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_register_route_actions_0g4vfdr.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1my5ziq._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1my5ziq._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_bookings_route_actions_1x10bx0.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_bookings_route_actions_1x10bx0.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0kia8q9._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0kia8q9._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_orders_route_actions_18oip2y.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_orders_route_actions_18oip2y.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0cz1bpb._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0cz1bpb._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_dashboard_page_actions_10dr1c5.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_dashboard_page_actions_10dr1c5.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0czy9dq._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0czy9dq._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0mtji6m._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0mtji6m._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_0x3i8za._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_0x3i8za._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_1lnqo1a._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_1lnqo1a._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_dashboard_page_tsx_07pubuq._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/src_app_dashboard_page_tsx_07pubuq._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/[externals]__0l8ei7u._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[externals]__0l8ei7u._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/_0uxp3uh._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_0uxp3uh._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_favicon_ico_route_actions_0g2jjls.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_favicon_ico_route_actions_0g2jjls.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__05f8wbh._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__05f8wbh._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_1h3ugvo._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_1h3ugvo._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_login_page_actions_04fnjo0.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_login_page_actions_04fnjo0.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1o8jotz._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1o8jotz._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_page_actions_0hhsz1j.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_page_actions_0hhsz1j.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_@swc_helpers_cjs__interop_require_default_cjs_1ztp13a._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_@swc_helpers_cjs__interop_require_default_cjs_1ztp13a._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_page_tsx_1chiuah._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/src_app_page_tsx_1chiuah._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1gth76-._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1gth76-._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_0ipxutm._.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_0ipxutm._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_register_page_actions_1op-s-x.js",
-          "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_register_page_actions_1op-s-x.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/src_app_layout_tsx_0r5yz5t._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1cpuet1._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1cpuet1._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1cpuet1._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1f2jx51._.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1f2jx51._.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1f2jx51._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__global-error_page_actions_0zi5s8-.js",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__global-error_page_actions_0zi5s8-.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__global-error_page_actions_0zi5s8-.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_0q-w892.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_0q-w892.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1m7qw-2._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1m7qw-2._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_admin_page_actions_1mcickz.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_admin_page_actions_1mcickz.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_1nkgb45._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_1nkgb45._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_admin_page_tsx_0ublbd0._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/src_app_admin_page_tsx_0ublbd0._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0l3yhx4._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0l3yhx4._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1eb1ktr._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1eb1ktr._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/[turbopack]_runtime.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[turbopack]_runtime.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_login_route_actions_1ox7zi0.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_login_route_actions_1ox7zi0.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0k13ots._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0k13ots._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_me_route_actions_17uv6xh.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_me_route_actions_17uv6xh.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1_66u60._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1_66u60._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_register_route_actions_0g4vfdr.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_register_route_actions_0g4vfdr.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1my5ziq._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1my5ziq._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_bookings_route_actions_1x10bx0.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_bookings_route_actions_1x10bx0.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0kia8q9._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0kia8q9._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_orders_route_actions_18oip2y.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_orders_route_actions_18oip2y.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0cz1bpb._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0cz1bpb._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_dashboard_page_actions_10dr1c5.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_dashboard_page_actions_10dr1c5.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0czy9dq._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0czy9dq._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0mtji6m._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0mtji6m._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_0x3i8za._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_0x3i8za._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_1lnqo1a._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_1lnqo1a._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_dashboard_page_tsx_07pubuq._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/src_app_dashboard_page_tsx_07pubuq._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/[externals]__0l8ei7u._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/[externals]__0l8ei7u._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/_0uxp3uh._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_0uxp3uh._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_favicon_ico_route_actions_0g2jjls.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_favicon_ico_route_actions_0g2jjls.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__05f8wbh._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__05f8wbh._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_1h3ugvo._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_1h3ugvo._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_login_page_actions_04fnjo0.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_login_page_actions_04fnjo0.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1o8jotz._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1o8jotz._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_page_actions_0hhsz1j.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_page_actions_0hhsz1j.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_@swc_helpers_cjs__interop_require_default_cjs_1ztp13a._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_@swc_helpers_cjs__interop_require_default_cjs_1ztp13a._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_page_tsx_1chiuah._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/src_app_page_tsx_1chiuah._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1gth76-._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1gth76-._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_0ipxutm._.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_0ipxutm._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_register_page_actions_1op-s-x.js",
+          "kind": "require-call",
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_register_page_actions_1op-s-x.js"
         },
         {
           "path": "<runtime>",
@@ -6081,7 +6081,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/next/dist/server/require.js": {
-      "bytes": 7377,
+      "bytes": 6992,
       "imports": [
         {
           "path": "path",
@@ -6131,67 +6131,67 @@
         {
           "path": ".open-next/server-functions/default/.next/server/app/api/auth/register/route.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\api\\auth\\register\\route.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/api/auth/register/route.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/api/auth/login/route.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\api\\auth\\login\\route.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/api/auth/login/route.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/_global-error/page.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\_global-error\\page.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/_global-error/page.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/api/bookings/route.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\api\\bookings\\route.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/api/bookings/route.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/api/auth/me/route.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\api\\auth\\me\\route.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/api/auth/me/route.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/favicon.ico/route.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\favicon.ico\\route.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/favicon.ico/route.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/api/orders/route.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\api\\orders\\route.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/api/orders/route.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/_not-found/page.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\_not-found\\page.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/_not-found/page.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/dashboard/page.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\dashboard\\page.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/dashboard/page.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/register/page.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\register\\page.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/register/page.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/admin/page.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\admin\\page.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/admin/page.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/login/page.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\login\\page.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/login/page.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/page.js",
           "kind": "require-call",
-          "original": "C:\\Users\\cheth\\OneDrive\\Desktop\\NewWeb\\NailsNewWeb\\.open-next\\server-functions\\default\\.next\\server\\app\\page.js"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/.next/server/app/page.js"
         }
       ],
       "format": "cjs"
@@ -6639,7 +6639,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/react-dom/index.js": {
-      "bytes": 1359,
+      "bytes": 1343,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/react-dom/cjs/react-dom.production.js",
@@ -6687,7 +6687,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/react/jsx-runtime.js": {
-      "bytes": 210,
+      "bytes": 202,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/react/cjs/react-jsx-runtime.production.js",
@@ -6729,7 +6729,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/next/dist/compiled/next-server/pages-turbo.runtime.prod.js": {
-      "bytes": 127226,
+      "bytes": 127184,
       "imports": [
         {
           "path": "url",
@@ -6829,17 +6829,17 @@
         {
           "path": ".open-next/server-functions/default/composable-cache.cjs",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/composable-cache.cjs"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/composable-cache.cjs"
         },
         {
           "path": ".open-next/server-functions/default/composable-cache.cjs",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/composable-cache.cjs"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/composable-cache.cjs"
         },
         {
           "path": ".open-next/server-functions/default/cache.cjs",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/cache.cjs"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/cache.cjs"
         },
         {
           "path": ".open-next/server-functions/default/node_modules/react/jsx-runtime.js",
@@ -7091,7 +7091,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/next/dist/server/next-server.js": {
-      "bytes": 50694,
+      "bytes": 50652,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/next/dist/server/node-environment.js",
@@ -7401,17 +7401,17 @@
         {
           "path": ".open-next/server-functions/default/composable-cache.cjs",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/composable-cache.cjs"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/composable-cache.cjs"
         },
         {
           "path": ".open-next/server-functions/default/composable-cache.cjs",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/composable-cache.cjs"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/composable-cache.cjs"
         },
         {
           "path": ".open-next/server-functions/default/cache.cjs",
           "kind": "require-call",
-          "original": "C:/Users/cheth/OneDrive/Desktop/NewWeb/NailsNewWeb/.open-next/server-functions/default/cache.cjs"
+          "original": "/home/aloka/Projects/che/NailsNewWeb/.open-next/server-functions/default/cache.cjs"
         },
         {
           "path": ".open-next/server-functions/default/node_modules/next/dist/experimental/testmode/server.js",
@@ -7427,7 +7427,7 @@
       "format": "esm"
     },
     ".open-next/server-functions/default/index.mjs": {
-      "bytes": 88121,
+      "bytes": 88061,
       "imports": [
         {
           "path": "node:module",
@@ -8350,7 +8350,7 @@
           "bytesInOutput": 9557
         },
         ".open-next/server-functions/default/node_modules/next/dist/lib/find-pages-dir.js": {
-          "bytesInOutput": 1452
+          "bytesInOutput": 1451
         },
         ".open-next/server-functions/default/node_modules/next/dist/server/web/spec-extension/adapters/reflect.js": {
           "bytesInOutput": 702
@@ -8944,7 +8944,7 @@
           "bytesInOutput": 445
         },
         ".open-next/server-functions/default/node_modules/next/dist/server/load-manifest.external.js": {
-          "bytesInOutput": 40551
+          "bytesInOutput": 40442
         },
         ".open-next/cloudflare-templates/shims/throw.js": {
           "bytesInOutput": 215
@@ -9051,6 +9051,18 @@
         ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_layout_tsx_0r5yz5t._.js": {
           "bytesInOutput": 1624
         },
+        ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1cpuet1._.js": {
+          "bytesInOutput": 8299
+        },
+        ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1f2jx51._.js": {
+          "bytesInOutput": 8259
+        },
+        ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__global-error_page_actions_0zi5s8-.js": {
+          "bytesInOutput": 275
+        },
+        ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_0q-w892.js": {
+          "bytesInOutput": 505
+        },
         ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1m7qw-2._.js": {
           "bytesInOutput": 4240
         },
@@ -9059,9 +9071,6 @@
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_1nkgb45._.js": {
           "bytesInOutput": 130412
-        },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_0q-w892.js": {
-          "bytesInOutput": 505
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_admin_page_tsx_0ublbd0._.js": {
           "bytesInOutput": 17246
@@ -9073,31 +9082,31 @@
           "bytesInOutput": 179945
         },
         ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1eb1ktr._.js": {
-          "bytesInOutput": 13412
+          "bytesInOutput": 17946
         },
         ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_login_route_actions_1ox7zi0.js": {
           "bytesInOutput": 276
         },
         ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0k13ots._.js": {
-          "bytesInOutput": 14261
+          "bytesInOutput": 18815
         },
         ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_me_route_actions_17uv6xh.js": {
           "bytesInOutput": 271
         },
         ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1_66u60._.js": {
-          "bytesInOutput": 13757
+          "bytesInOutput": 18296
         },
         ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_auth_register_route_actions_0g4vfdr.js": {
           "bytesInOutput": 283
         },
         ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__1my5ziq._.js": {
-          "bytesInOutput": 14763
+          "bytesInOutput": 19312
         },
         ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_bookings_route_actions_1x10bx0.js": {
           "bytesInOutput": 273
         },
         ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0kia8q9._.js": {
-          "bytesInOutput": 14839
+          "bytesInOutput": 19388
         },
         ".open-next/server-functions/default/.next/server/chunks/_next-internal_server_app_api_orders_route_actions_18oip2y.js": {
           "bytesInOutput": 269
@@ -9151,7 +9160,7 @@
           "bytesInOutput": 361
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/src_app_page_tsx_1chiuah._.js": {
-          "bytesInOutput": 67246
+          "bytesInOutput": 67157
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1gth76-._.js": {
           "bytesInOutput": 4257
@@ -9161,15 +9170,6 @@
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_register_page_actions_1op-s-x.js": {
           "bytesInOutput": 267
-        },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1cpuet1._.js": {
-          "bytesInOutput": 8299
-        },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__1f2jx51._.js": {
-          "bytesInOutput": 8259
-        },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__global-error_page_actions_0zi5s8-.js": {
-          "bytesInOutput": 275
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js": {
           "bytesInOutput": 20472
@@ -9217,7 +9217,7 @@
           "bytesInOutput": 969
         },
         ".open-next/server-functions/default/node_modules/next/dist/server/require.js": {
-          "bytesInOutput": 3972
+          "bytesInOutput": 3958
         },
         ".open-next/server-functions/default/node_modules/next/dist/lib/wait.js": {
           "bytesInOutput": 341
@@ -9370,10 +9370,10 @@
           "bytesInOutput": 5074
         },
         ".open-next/server-functions/default/index.mjs": {
-          "bytesInOutput": 61232
+          "bytesInOutput": 61172
         }
       },
-      "bytes": 3560283
+      "bytes": 3582735
     }
   }
 }

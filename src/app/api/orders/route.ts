@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const status = searchParams.get("status");
 
-    let orders = getAllOrders();
+    let orders = await getAllOrders();
     if (status && status !== "all") {
       orders = orders.filter((o) => o.status === status);
     }
@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const newOrder = createOrder({
+    const newOrder = await createOrder({
       customerName,
       phone,
       shippingAddress: shippingAddress || "",
@@ -89,7 +89,7 @@ export async function PATCH(request: NextRequest) {
       );
     }
 
-    const updated = updateOrder(id, updates);
+    const updated = await updateOrder(id, updates);
     if (!updated) {
       return NextResponse.json(
         { success: false, error: "Order not found" },
@@ -129,7 +129,7 @@ export async function DELETE(request: NextRequest) {
       );
     }
 
-    const deleted = deleteOrder(id);
+    const deleted = await deleteOrder(id);
     if (!deleted) {
       return NextResponse.json(
         { success: false, error: "Order not found" },

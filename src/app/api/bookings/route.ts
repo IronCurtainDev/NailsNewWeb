@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const status = searchParams.get("status");
 
-    let bookings = getAllBookings();
+    let bookings = await getAllBookings();
     if (status && status !== "all") {
       bookings = bookings.filter((b) => b.status === status);
     }
@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const newBooking = createBooking({
+    const newBooking = await createBooking({
       name,
       phone,
       service,
@@ -86,7 +86,7 @@ export async function PATCH(request: NextRequest) {
       );
     }
 
-    const updated = updateBooking(id, updates);
+    const updated = await updateBooking(id, updates);
     if (!updated) {
       return NextResponse.json(
         { success: false, error: "Booking not found" },
@@ -126,7 +126,7 @@ export async function DELETE(request: NextRequest) {
       );
     }
 
-    const deleted = deleteBooking(id);
+    const deleted = await deleteBooking(id);
     if (!deleted) {
       return NextResponse.json(
         { success: false, error: "Booking not found" },
