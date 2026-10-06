@@ -30,6 +30,17 @@ interface PressOnOrder {
   status: "new" | "processing" | "shipped" | "completed" | "cancelled";
 }
 
+interface Service {
+  id: string;
+  icon: string;
+  title: string;
+  subtitle: string;
+  price: string;
+  duration: string;
+  desc: string;
+  highlight: string;
+}
+
 const DEFAULT_PIN = "aureva2026";
 
 export default function AdminPage() {
@@ -37,9 +48,10 @@ export default function AdminPage() {
   const [pinInput, setPinInput] = useState("");
   const [pinError, setPinError] = useState("");
 
-  const [activeTab, setActiveTab] = useState<"bookings" | "orders">("bookings");
+  const [activeTab, setActiveTab] = useState<"bookings" | "orders" | "services">("bookings");
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [orders, setOrders] = useState<PressOnOrder[]>([]);
+  const [services, setServices] = useState<Service[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
@@ -56,14 +68,17 @@ export default function AdminPage() {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const [bRes, oRes] = await Promise.all([
+      const [bRes, oRes, sRes] = await Promise.all([
         fetch("/api/bookings"),
         fetch("/api/orders"),
+        fetch("/api/services"),
       ]);
       const bData = await bRes.json();
       const oData = await oRes.json();
+      const sData = await sRes.json();
       if (bData.success) setBookings(bData.data);
       if (oData.success) setOrders(oData.data);
+      if (sData.success) setServices(sData.data);
     } catch (err) {
       console.error("Error fetching admin data:", err);
     } finally {
@@ -151,6 +166,23 @@ export default function AdminPage() {
       }
     } catch (err) {
       console.error("Failed to delete order:", err);
+    }
+  };
+
+  const updateServiceRecord = async (id: string, updates: Partial<Service>) => {
+    try {
+      const res = await fetch("/api/services", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id, ...updates }),
+      });
+      if (res.ok) {
+        setServices((prev) =>
+          prev.map((s) => (s.id === id ? { ...s, ...updates } : s))
+        );
+      }
+    } catch (err) {
+      console.error("Failed to update service:", err);
     }
   };
 
@@ -327,6 +359,20 @@ export default function AdminPage() {
               }}
             >
               🛍️ Press-On Orders ({orders.length})
+            </button>
+            <button
+              onClick={() => {
+                setActiveTab("services");
+                setStatusFilter("all");
+              }}
+              className="font-dm text-xs uppercase tracking-wider px-5 py-2 rounded-lg font-medium transition-all cursor-pointer"
+              style={{
+                background: activeTab === "services" ? "var(--gold)" : "transparent",
+                color: activeTab === "services" ? "#111110" : "#AAA",
+                fontWeight: activeTab === "services" ? 700 : 500,
+              }}
+            >
+              💅 Services
             </button>
           </div>
 
@@ -550,6 +596,55 @@ export default function AdminPage() {
                 </table>
               </div>
             )}
+          </div>
+        )}
+
+        {activeTab === "services" && (
+          <div className="space-y-4">
+            <h2 className="font-display text-xl text-white mb-4">Manage Nail Services</h2>
+            {services.map((s) => (
+              <div key={s.id} className="p-4 rounded-xl border border-gray-800 bg-[#1A1A18] flex flex-col gap-3">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <input
+                      type="text"
+                      value={s.title}
+                      onChange={(e) => updateServiceRecord(s.id, { title: e.target.value })}
+                      className="font-display text-lg text-white bg-transparent border-b border-gray-700 outline-none w-64 mr-3"
+                    />
+                    <input
+                      type="text"
+                      value={s.price}
+                      onChange={(e) => updateServiceRecord(s.id, { price: e.target.value })}
+                      className="font-dm text-sm text-gold bg-transparent border-b border-gray-700 outline-none w-24"
+                    />
+                  </div>
+                  <input
+                    type="text"
+                    value={s.duration}
+                    onChange={(e) => updateServiceRecord(s.id, { duration: e.target.value })}
+                    className="font-dm text-xs text-gray-400 bg-transparent border-b border-gray-700 outline-none w-24 text-right"
+                  />
+                </div>
+                <input
+                  type="text"
+                  value={s.subtitle}
+                  onChange={(e) => updateServiceRecord(s.id, { subtitle: e.target.value })}
+                  className="font-dm text-xs text-gray-400 bg-transparent border-b border-gray-700 outline-none w-full"
+                />
+                <textarea
+                  value={s.desc}
+                  onChange={(e) => updateServiceRecord(s.id, { desc: e.target.value })}
+                  className="font-dm text-sm text-gray-300 bg-transparent border border-gray-700 rounded p-2 outline-none w-full min-h-[60px]"
+                />
+                <input
+                  type="text"
+                  value={s.highlight}
+                  onChange={(e) => updateServiceRecord(s.id, { highlight: e.target.value })}
+                  className="font-dm text-xs text-amber-400/80 bg-transparent border-b border-gray-700 outline-none w-full"
+                />
+              </div>
+            ))}
           </div>
         )}
       </div>

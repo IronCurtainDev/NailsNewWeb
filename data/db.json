@@ -130,5 +130,47 @@
       "notes": "Need it before the weekend",
       "status": "new"
     }
+  ],
+  "services": [
+    {
+      "id": "s1",
+      "icon": "✦",
+      "title": "Gel Manicure",
+      "subtitle": "Gel Manicure",
+      "price": "Rs.3500",
+      "duration": "90 mins",
+      "desc": "Sterile dry manicure, deep cuticle work, strengthening BIAB rubber base, and lasting chip-free colour.",
+      "highlight": "Lasts 3–4 weeks"
+    },
+    {
+      "id": "s2",
+      "icon": "✧",
+      "title": "Gel Extensions",
+      "subtitle": "Soft Gel / Gel-X Full Set",
+      "price": "Rs.5000",
+      "duration": "120 mins",
+      "desc": "Custom-fitted soft gel tips cured with LED builder gel. Lightweight, natural flex, zero damage.",
+      "highlight": "No drilling needed"
+    },
+    {
+      "id": "s4",
+      "icon": "❋",
+      "title": "Bridal Suite",
+      "subtitle": "Bridal nails",
+      "price": "Rs.7500",
+      "duration": "150 mins",
+      "desc": "Full bridal consultation, custom sizing, crystal cluster embellishments, 24K chrome filigree, and press-on trial set.",
+      "highlight": "Includes trial set"
+    },
+    {
+      "id": "s5",
+      "icon": "✦",
+      "title": "Press-On Nails",
+      "subtitle": "Ready-to-Wear & Custom Sets",
+      "price": "From Rs.3000",
+      "duration": "Instant Wear",
+      "desc": "Salon-quality reusable gel press-on nails. Handcrafted by Che with professional gel, complete with prep kit, buffer, and premium adhesive.",
+      "highlight": "Reusable & Ready to Buy"
+    }
   ]
 }

@@ -38,3 +38,14 @@ CREATE TABLE IF NOT EXISTS orders (
   status TEXT NOT NULL,
   userId TEXT
 );
+
+CREATE TABLE IF NOT EXISTS services (
+  id TEXT PRIMARY KEY,
+  icon TEXT NOT NULL,
+  title TEXT NOT NULL,
+  subtitle TEXT NOT NULL,
+  price TEXT NOT NULL,
+  duration TEXT NOT NULL,
+  desc TEXT NOT NULL,
+  highlight TEXT NOT NULL
+);

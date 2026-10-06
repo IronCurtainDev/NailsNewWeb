@@ -46,10 +46,22 @@ export interface PressOnOrder {
   userId?: string;
 }
 
+export interface Service {
+  id: string;
+  icon: string;
+  title: string;
+  subtitle: string;
+  price: string;
+  duration: string;
+  desc: string;
+  highlight: string;
+}
+
 interface DatabaseSchema {
   users: User[];
   bookings: Booking[];
   orders: PressOnOrder[];
+  services: Service[];
 }
 
 // ============================================================
@@ -139,6 +151,48 @@ function ensureLocalDb(): DatabaseSchema {
           status: "new",
         },
       ],
+      services: [
+        {
+          id: "s1",
+          icon: "✦",
+          title: "Gel Manicure",
+          subtitle: "Gel Manicure",
+          price: "Rs.3500",
+          duration: "90 mins",
+          desc: "Sterile dry manicure, deep cuticle work, strengthening BIAB rubber base, and lasting chip-free colour.",
+          highlight: "Lasts 3–4 weeks"
+        },
+        {
+          id: "s2",
+          icon: "✧",
+          title: "Gel Extensions",
+          subtitle: "Soft Gel / Gel-X Full Set",
+          price: "Rs.5000",
+          duration: "120 mins",
+          desc: "Custom-fitted soft gel tips cured with LED builder gel. Lightweight, natural flex, zero damage.",
+          highlight: "No drilling needed"
+        },
+        {
+          id: "s4",
+          icon: "❋",
+          title: "Bridal Suite",
+          subtitle: "Bridal nails",
+          price: "Rs.7500",
+          duration: "150 mins",
+          desc: "Full bridal consultation, custom sizing, crystal cluster embellishments, 24K chrome filigree, and press-on trial set.",
+          highlight: "Includes trial set"
+        },
+        {
+          id: "s5",
+          icon: "✦",
+          title: "Press-On Nails",
+          subtitle: "Ready-to-Wear & Custom Sets",
+          price: "From Rs.3000",
+          duration: "Instant Wear",
+          desc: "Salon-quality reusable gel press-on nails. Handcrafted by Che with professional gel, complete with prep kit, buffer, and premium adhesive.",
+          highlight: "Reusable & Ready to Buy"
+        }
+      ],
     };
     fs.writeFileSync(DB_FILE, JSON.stringify(initialData, null, 2), "utf-8");
     return initialData;
@@ -150,7 +204,7 @@ function ensureLocalDb(): DatabaseSchema {
     if (!parsed.users) parsed.users = [];
     return parsed;
   } catch {
-    const fallback: DatabaseSchema = { users: [], bookings: [], orders: [] };
+    const fallback: DatabaseSchema = { users: [], bookings: [], orders: [], services: [] };
     fs.writeFileSync(DB_FILE, JSON.stringify(fallback, null, 2), "utf-8");
     return fallback;
   }
@@ -481,4 +535,50 @@ export async function deleteOrder(id: string): Promise<boolean> {
     return true;
   }
   return false;
+}
+
+// ============================================================
+// SERVICES CRUD
+// ============================================================
+
+export async function getAllServices(): Promise<Service[]> {
+  const d1 = await getD1();
+  if (d1) {
+    const res = await d1.prepare("SELECT * FROM services").all();
+    return res.results as Service[];
+  }
+  return ensureLocalDb().services || [];
+}
+
+export async function updateService(id: string, updates: Partial<Service>): Promise<Service | null> {
+  const d1 = await getD1();
+  if (d1) {
+    const existing = (await d1.prepare("SELECT * FROM services WHERE id = ?").bind(id).first()) as Service | null;
+    if (!existing) return null;
+    const merged = { ...existing, ...updates };
+    await d1
+      .prepare(
+        "UPDATE services SET icon = ?, title = ?, subtitle = ?, price = ?, duration = ?, desc = ?, highlight = ? WHERE id = ?"
+      )
+      .bind(
+        merged.icon,
+        merged.title,
+        merged.subtitle,
+        merged.price,
+        merged.duration,
+        merged.desc,
+        merged.highlight,
+        id
+      )
+      .run();
+    return merged;
+  }
+
+  const db = ensureLocalDb();
+  if (!db.services) db.services = [];
+  const index = db.services.findIndex((s) => s.id === id);
+  if (index === -1) return null;
+  db.services[index] = { ...db.services[index], ...updates };
+  saveLocalDb(db);
+  return db.services[index];
 }

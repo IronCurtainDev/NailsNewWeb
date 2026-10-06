@@ -232,6 +232,9 @@ export default function Home() {
   // Gallery filter
   const [galleryFilter, setGalleryFilter] = useState("All");
 
+  // Dynamic Services
+  const [servicesData, setServicesData] = useState(SERVICES);
+
   // Booking form
   const [bookingService, setBookingService] = useState(SERVICES[0].title);
   const [bookingDate, setBookingDate] = useState("");
@@ -267,8 +270,17 @@ export default function Home() {
     setTimeout(() => setToast(null), 3800);
   };
 
-  // Load auth user from localStorage
+  // Load auth user and services
   useEffect(() => {
+    fetch("/api/services")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success && data.data && data.data.length > 0) {
+          setServicesData(data.data);
+        }
+      })
+      .catch((err) => console.error("Failed to fetch services:", err));
+
     try {
       const stored = localStorage.getItem("aureva_user");
       if (stored) {
@@ -548,41 +560,7 @@ export default function Home() {
               </svg>
               Instagram
             </a>
-            {/* Auth button */}
-            {authUser ? (
-              <Link
-                href="/dashboard"
-                id="nav-dashboard-btn"
-                className="hidden sm:inline-flex items-center gap-2 font-dm"
-                style={{
-                  padding: "9px 18px", borderRadius: "8px",
-                  background: "linear-gradient(135deg, rgba(201,168,76,0.15) 0%, rgba(201,168,76,0.08) 100%)",
-                  border: "1px solid rgba(201,168,76,0.35)",
-                  color: "var(--gold-dark)", textDecoration: "none",
-                  fontSize: "11px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase",
-                  transition: "all 0.2s",
-                }}
-              >
-                <span style={{ fontSize: "14px" }}>👤</span>
-                {authUser.name.split(" ")[0]}
-              </Link>
-            ) : (
-              <Link
-                href="/login"
-                id="nav-login-btn"
-                className="hidden sm:inline-flex font-dm"
-                style={{
-                  padding: "9px 18px", borderRadius: "8px",
-                  background: "rgba(17,17,16,0.06)",
-                  border: "1px solid rgba(17,17,16,0.15)",
-                  color: "var(--text-muted)", textDecoration: "none",
-                  fontSize: "11px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase",
-                  transition: "all 0.2s",
-                }}
-              >
-                Sign In
-              </Link>
-            )}
+            {/* Auth button removed */}
             <a
               href="#booking"
               className="btn-dark hidden sm:inline-flex"
@@ -654,32 +632,7 @@ export default function Home() {
               >
                 Book Now
               </a>
-              {authUser ? (
-                <a
-                  href="/dashboard"
-                  onClick={() => setMenuOpen(false)}
-                  className="font-dm"
-                  style={{
-                    fontSize: "13px", fontWeight: 500, letterSpacing: "0.18em",
-                    textTransform: "uppercase", color: "var(--gold-dark)", textDecoration: "none",
-                    display: "flex", alignItems: "center", gap: "8px",
-                  }}
-                >
-                  👤 My Account
-                </a>
-              ) : (
-                <a
-                  href="/login"
-                  onClick={() => setMenuOpen(false)}
-                  className="font-dm"
-                  style={{
-                    fontSize: "13px", fontWeight: 500, letterSpacing: "0.18em",
-                    textTransform: "uppercase", color: "var(--text-muted)", textDecoration: "none",
-                  }}
-                >
-                  Sign In
-                </a>
-              )}
+              {/* Auth button removed */}
             </nav>
           </div>
         )}
@@ -1057,7 +1010,7 @@ export default function Home() {
               boxShadow: "var(--shadow-soft)",
             }}
           >
-            {SERVICES.map((srv, i) => (
+            {servicesData.map((srv, i) => (
               <div
                 key={srv.id}
                 className="service-card"
@@ -2140,7 +2093,7 @@ export default function Home() {
                       className="input-luxury"
                       style={{ borderRadius: "8px", cursor: "pointer", appearance: "auto" }}
                     >
-                      {SERVICES.map((s) => (
+                      {servicesData.map((s) => (
                         <option key={s.id} value={s.title}>
                           {s.title} — {s.price}
                         </option>
@@ -2333,7 +2286,7 @@ export default function Home() {
               <div className="font-dm" style={{ fontSize: "10px", letterSpacing: "0.24em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 700, marginBottom: "20px" }}>
                 Services
               </div>
-              {SERVICES.map((s) => (
+              {servicesData.map((s) => (
                 <a
                   key={s.id}
                   href="#services"
